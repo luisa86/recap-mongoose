@@ -5,7 +5,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Listas de cosas para hacer</h1>
+    <% lists.forEach(list => { %>
+      <%- include("partials/list",{list:list}) %>
+    <% }) %>
   </body>
 </html>
